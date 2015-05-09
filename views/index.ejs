@@ -8,6 +8,22 @@
         <%- t('welcome_message')%> <img src="<%= img('icon/arrow_left_white_11x11.png') %>" alt="">
       </p>
 
+			<div>
+
+			<div ng-controller="BlocksCtrl as blocks">
+				<div ng-repeat="item in blocks.squares">
+          {{item}}
+				</div>
+			
+
+
+
+
+			</div>
+
+
+
+			</div>
       <a href="sample" class="btn btn-water"><%- t('sample_link')%></a>
     </section>
   </div>
