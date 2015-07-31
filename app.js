@@ -5,7 +5,8 @@ var woodruff = require("woodruff")
   , themeEngage = require("theme-engage");
 
 var experiments = [
-  { "featureOne" : false }
+  {name: "fsStylesEx", default:true, description: "Use fsStyles"},
+  { "featureOne" : false },
 ];
 
 /**

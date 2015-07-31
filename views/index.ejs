@@ -1,18 +1,18 @@
 <% page = { 
     'title' : 'PAGE_TITLE', 
     'key': 'INDEX_PAGE_NAME',
-    'ngApp': "Magazine"
+    'ngApp': "ListApp"
   } %>
 <% assets = { 
   'css' : [], 
   'js' : [
           'angular-1.4.1/angular.js',
-          'modules/blocks.js'
+          'modules/list.js'
         ] 
   } %>
 <div id="main" class="experiments">
   <div class="no-layout">
-    <h1 class="font21 serif"><%- t('welcome_title')%></h1>
+    <h2 class="font21 serif"><%- t('welcome_title')%></h2>
     <section class="basic">
       <p>
         <%- t('welcome_message')%> <img src="<%= img('icon/arrow_left_white_11x11.png') %>" alt="">
@@ -20,11 +20,13 @@
 
 			<div>
 
-			<div ng-controller="BlocksCtrl as blocks">
-				<div ng-repeat="item in blocks.squares">
-          {{item}}
+			<div ng-controller="ListCtrl as list">
+				<div ng-repeat="item in list.list track by $index">
+          <li ng-click="list.edit($index)">{{item}}</li> 
+          <button class="fs-button fs-button--minor" ng-click="list.delete($index)">delete</button>
 				</div>
 			
+        <button class="fs-button fs-button--recommended" ng-click="list.add()">Add item</button>
 
 
 
