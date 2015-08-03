@@ -12,4 +12,9 @@ module.exports = function(app) {
   app.get('/', function(req, res){
     res.render("index", {});
   });
+  app.get('/ugly', function(req, res){
+    res.render("ugly", {});
+  });
+  
+  
 }
