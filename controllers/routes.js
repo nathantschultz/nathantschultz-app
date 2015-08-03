@@ -5,16 +5,15 @@ module.exports = function(app) {
     layout: "layout/layout-skills"
   });
   */
-  
-  app.get('/:page', function(req, res){
-    res.render(req.params.page, {});
-  });
+
+  // app.get('/:page', function(req, res){
+  //   res.render(req.params.page, {});
+  // });
   app.get('/', function(req, res){
     res.render("index", {});
   });
   app.get('/ugly', function(req, res){
-    res.render("ugly", {});
+    res.render("ugly", {layout: "layout/layout-nathan"});
   });
   
-  
-}
+};
